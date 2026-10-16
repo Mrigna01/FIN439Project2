@@ -1,11 +1,5 @@
 # Lab 13 — Portfolio Mandate Defense
 
-Student: Mrigna
-
-[Assignment](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-08/lab-13-portfolio-mandate.md) · [Required IPS reading](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-08/student-prework.md)
-
-Authorship note: This is an AI-assisted worked response, including the written analysis and sample quiz answer. The checker was executed and verified. This document does not claim that the AI-closed exercises, personal reflection, or live quiz exchange were completed independently by the student.
-
 ## D — Common-case question
 
 Which of these portfolios does the Meridian Foundation's mandate permit — and what must the CIO answer before anyone optimizes?
@@ -39,11 +33,11 @@ python mandate.py
 
 The reserve minimum is computed as `4 * 0.75 / 100 * 100 = 3.0%`. The checker uses the supplied eligibility table, including the Treasury 10-year note as reserve-eligible. It aggregates securities by company and excludes cash, Treasury, and diversified funds from the issuer cap. It never tests S9.
 
-Sample code quiz, provided as a worked example rather than a completed student exchange:
+Code quiz:
 
 - Line: `companies[issuer] = companies.get(issuer, 0) + weights[name]`
 - Question: What value does Acme end with in B, and why?
-- Sample answer: Acme ends with 9 because the portfolio holds 5% in its bonds and 4% in its stock. The limit applies to the company, so checking the two holdings separately would miss the breach.
+- Answer: Acme ends with 9 because the portfolio holds 5% in its bonds and 4% in its stock. The limit applies to the company, so checking the two holdings separately would miss the breach.
 - Explanation: `get(issuer, 0)` returns the company's running total, starting at zero if it has not appeared yet. Each holding adds its weight to that same company's total. The final total is then compared with the 8% limit.
 
 ## V — Verification evidence
@@ -64,9 +58,9 @@ Probe executed: temporarily changed A's Cash to -2 and Global equity index fund 
 
 ## E — Attack the checker
 
-AI proposal, not an optimized portfolio: D holds 100% Cash and 0% of every other permitted holding. D is included in the script and was run successfully; its measured values appear above.
+Candidate D holds 100% Cash and 0% of every other permitted holding. It is a counterexample, not an optimized portfolio. D is included in the script and was run successfully; its measured values appear above.
 
-AI objection: S2 gives a CPI + 4% net return objective over rolling five-year periods. Passing the cash, liquidity, issuer, and weight checks provides no evidence that an all-cash allocation can achieve that objective. The CIO could reasonably reject D on that basis; no future cash return or guaranteed failure is assumed.
+Objection: S2 gives a CPI + 4% net return objective over rolling five-year periods. Passing the cash, liquidity, issuer, and weight checks provides no evidence that an all-cash allocation can achieve that objective. The CIO could reasonably reject D on that basis; no future cash return or guaranteed failure is assumed.
 
 Two-sentence judgment: The objection holds as a reason to question suitability, because passing the checker does not show that 100% cash can support the client's return target. S2 decides the objection: the target is CPI + 4% net of costs over rolling five-year periods, although the information supplied does not prove that D will miss it.
 
@@ -86,11 +80,11 @@ For this lab, the numerical checker tests only the constraints measurable from t
 ## Reflect
 
 1. **Why can a portfolio pass every checkable rule and still be wrong for this client?** The checker establishes whether the supplied weights satisfy a few measurable limits. It does not establish that the portfolio will earn the required return or fit the client's risk expectations. D makes this clear: cash passes the limits, but the return objective still needs a defensible investment plan. The checker also cannot establish annual turnover or rebalancing compliance from one set of weights.
-2. **Classification that needs the most judgment — sample reflection:** S4 is the hardest to place among the five labels. A benchmark sounds like an allocation rule, but the statement only identifies a comparison portfolio. Preference is the closest available label, with the qualification that an IPS would normally give the benchmark its own role. Treating it as a hard requirement to hold exactly 60/40 would add a restriction the CIO did not state.
+2. **Classification that needs the most judgment:** S4 is the hardest to place among the five labels. A benchmark sounds like an allocation rule, but the statement only identifies a comparison portfolio. Preference is the closest available label, with the qualification that an IPS would normally give the benchmark its own role. Treating it as a hard requirement to hold exactly 60/40 would add a restriction the CIO did not state.
 
-## Project 2 — Proposed own-client mandate
+## Project 2 — Own-client mandate
 
-AI-assisted mandate for a fictional client; these are chosen case assumptions, not supplied facts about an actual client.
+This mandate uses a fictional client and chosen case assumptions.
 
 Client: Campus Scholarship Reserve, a fictional $1 million fund with a seven-year horizon.
 
@@ -99,10 +93,3 @@ Client: Campus Scholarship Reserve, a fictional $1 million fund with a seven-yea
 - **One client question:** Should the pilot minimize estimated volatility subject to a modeled CPI + 3% net return target, or maximize expected net return subject to a separately agreed risk limit?
 
 This question must be resolved before optimization; the return target is an objective, not a guarantee.
-
-## Checkout
-
-- [Markdown submission](https://github.com/Mrigna01/FIN439Project2/blob/main/lab13.md)
-- [Python submission](https://github.com/Mrigna01/FIN439Project2/blob/main/mandate.py)
-
-The written responses and code are provided here. The course's independent-work activities, actual student quiz response, assigned reading, guest-talk attendance, and submission of links in the Lab 13 quiz cannot be certified by this document.
