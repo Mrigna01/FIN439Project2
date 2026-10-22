@@ -133,37 +133,41 @@ If we left out both cross terms, the benchmark's calculated volatility would be 
 
 ## Before Thursday - my fund universe
 
-My Project 2 client is the Campus Scholarship Reserve from Lab 13. It has $1 million, a seven-year horizon, and $10,000 quarterly scholarship payments. It needs at least $40,000, or 4%, in eligible reserves and aims for CPI + 3% over rolling five-year periods. I chose four funds so each part of the portfolio has a clear job.
+My Project 2 client is the Campus Scholarship Reserve from Lab 13. It has $1 million, a seven-year horizon, and $10,000 quarterly scholarship payments. It needs at least $40,000, or 4%, in eligible reserves and aims for CPI + 3% over rolling five-year periods. I chose four funds for Lab 15, with one each for reserves, government bonds, corporate bonds and global stocks.
 
-| Ticker | Full fund name | Role in my portfolio | Why I included it |
-|---|---|---|---|
-| BIL | State Street SPDR Bloomberg 1-3 Month T-Bill ETF | Cash and reserves | Short-term Treasury bills provide a cash-like sleeve for scholarship payments. This is the main fund I would use for the reserve allocation. |
-| IEF | iShares 7-10 Year Treasury Bond ETF | Government bonds | Adds Treasury exposure beyond short-term bills. Its price can move with interest rates, so it is not the same as cash. |
-| LQD | iShares iBoxx $ Investment Grade Corporate Bond ETF | Fixed income | Adds diversified investment-grade corporate bonds and a different source of income. |
-| VT | Vanguard Total World Stock ETF | Global equity | Adds global stocks for long-term growth toward the return objective. |
+| Ticker | Full fund name | Role in my portfolio | Annual expense ratio | Why I included it |
+|---|---|---|---:|---|
+| SGOV | iShares 0-3 Month Treasury Bond ETF | Cash and reserves | 0.09% | Very short-term Treasury securities make this the main sleeve for scholarship payments. |
+| SCHR | Schwab Intermediate-Term U.S. Treasury ETF | Government bonds | 0.03% | Holds Treasuries across the 3-10 year maturity range, adding intermediate-term exposure beyond the reserve fund. |
+| USIG | iShares Broad USD Investment Grade Corporate Bond ETF | Corporate bonds | 0.04% | Adds broad investment-grade corporate bond exposure at a low fee. It carries credit risk as well as interest-rate risk. |
+| VT | Vanguard Total World Stock ETF | Global stocks | 0.06% | Keeps U.S., developed international and emerging-market stocks in one broad growth sleeve. |
 
-Fund details checked on the issuer pages: [BIL](https://www.ssga.com/us/en/individual/etfs/state-street-spdr-bloomberg-1-3-month-t-bill-etf-bil), [IEF](https://www.ishares.com/us/products/239456/ishares-710-year-treasury-bond-etf), [LQD](https://www.ishares.com/us/products/239566/lqd-ishares-iboxx-investment-grade-corporate-bond-etf), and [VT](https://advisors.vanguard.com/investments/products/vt/vanguard-total-world-stock-etf).
+Fund roles and listed expense ratios checked on October 22, 2026 using the issuer pages: [SGOV](https://www.ishares.com/us/products/314116/ishares-0-3-month-treasury-bond-etf), [SCHR](https://www.schwabassetmanagement.com/products/schr), [USIG](https://www.blackrock.com/us/individual/products/239460/ishares-broad-usd-investment-grade-corporate-bond-etf), and [VT](https://advisors.vanguard.com/investments/products/vt/vanguard-total-world-stock-etf).
 
-These funds map to the four roles used in the lab. For the classroom model, BIL and IEF represent the reserve-eligible government sleeves. I would mainly use BIL for near-term payments because IEF has more interest-rate risk. LQD and VT are not reserve sleeves. This selects the investments; it does not set their final portfolio weights.
+I kept VT from the lab examples because one global stock fund makes sense for this project. SGOV gives me a short-term Treasury reserve fund, SCHR covers 3-10 year Treasury maturities, and USIG adds broad investment-grade corporate bonds. Their listed fees are low, which matters for a return objective measured after costs. These choices are based on roles and costs, not on picking whichever fund had the best past return.
+
+This setup fits [Lab 15](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-09/lab-15-portfolio-stability.md): four distinct sleeves make the minimum-risk search and the all-months versus last-36-months comparison easier to follow. At 5-percentage-point steps, four funds produce 1,771 fully invested, long-only mixes before filtering, compared with 53,130 for six funds. Keeping global stocks together also avoids adding separate regional return estimates to the search. The trade-off is less control over regional stock weights. This is a practical fit for the lab, not a claim that these funds will earn more than the examples.
+
+For the classroom model, SGOV and SCHR represent the reserve-eligible government sleeves. I would mainly use SGOV for near-term payments because SCHR has more interest-rate risk. USIG and VT are not reserve sleeves. All four are diversified ETFs. This selects the investments; it does not set their final portfolio weights or prove full mandate compliance.
 
 My own client's objective is CPI + 3%, which would be 5.5% using the lab's 2.5% CPI estimate. Meridian's 6.5% objective in `portfolio.py` stays separate from my client's target.
 
 ## Monthly price data
 
-The combined file is [prices.csv](prices.csv). Its columns are `Date,BIL,IEF,LQD,VT`, with the oldest month first. All prices are in U.S. dollars and use Yahoo Finance's **Adj Close**, which adjusts historical closing prices for distributions and splits.
+The combined file is [prices.csv](prices.csv). Its columns are `Date,SGOV,SCHR,USIG,VT`, with the oldest month first. All prices are in U.S. dollars and use Yahoo Finance's **Adj Close**, which adjusts historical closing prices for distributions and splits. Fund operating expenses are already reflected in historical fund prices, so they should not be subtracted again from returns calculated from this file.
 
 | Ticker | Price source | Download date |
 |---|---|---|
-| BIL | [Yahoo Finance historical data](https://finance.yahoo.com/quote/BIL/history/) | October 22, 2026 |
-| IEF | [Yahoo Finance historical data](https://finance.yahoo.com/quote/IEF/history/) | October 22, 2026 |
-| LQD | [Yahoo Finance historical data](https://finance.yahoo.com/quote/LQD/history/) | October 22, 2026 |
+| SGOV | [Yahoo Finance historical data](https://finance.yahoo.com/quote/SGOV/history/) | October 22, 2026 |
+| SCHR | [Yahoo Finance historical data](https://finance.yahoo.com/quote/SCHR/history/) | October 22, 2026 |
+| USIG | [Yahoo Finance historical data](https://finance.yahoo.com/quote/USIG/history/) | October 22, 2026 |
 | VT | [Yahoo Finance historical data](https://finance.yahoo.com/quote/VT/history/) | October 22, 2026 |
 
 The download used Yahoo Finance's chart endpoint. It retrieved daily adjusted closes and kept the last trading day's value in each completed month. That gives monthly observations dated on their actual trading days, rather than monthly averages. No prices were interpolated or forward-filled.
 
 The file contains **61 month-end prices per fund, from September 30, 2021 through September 30, 2026**. September 2021 is the starting observation, so the data can produce **60 monthly returns from October 2021 through September 2026**. October 2026 is excluded because it was still in progress on the download date.
 
-Checks on the saved file found all 61 months, four complete numeric price columns, no missing or nonpositive prices, no duplicate dates, and matching dates across funds. The file is sorted from oldest to newest. Each price matches the corresponding saved source observation.
+Checks on the saved file found all 61 months, four complete numeric price columns (244 prices), no missing or nonpositive prices, no duplicate dates, and matching dates across funds. The file is sorted from oldest to newest. Each price matches the corresponding saved source observation.
 
 Adjusted prices can be revised by the provider after later distributions. The downloaded snapshot is saved in [data/prices_source.json](data/prices_source.json), along with the exact request URLs, download timestamp, original closing prices and selected adjusted closes. [download_prices.py](download_prices.py) reproduces the download with `python download_prices.py` using Python's standard library.
 

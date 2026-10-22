@@ -13,7 +13,7 @@ from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 from zoneinfo import ZoneInfo
 
-TICKERS = ('BIL', 'IEF', 'LQD', 'VT')
+TICKERS = ('SGOV', 'SCHR', 'USIG', 'VT')
 START = '2021-09-01'  # Extra starting price allows 60 monthly returns.
 END = '2026-10-01'  # Exclusive; October is incomplete at download time.
 ROOT = Path(__file__).resolve().parent
