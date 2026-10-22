@@ -194,6 +194,3 @@ My own results show two versions of that problem. Changing the estimation window
 - [verify_lab15.py](verify_lab15.py): engine and app checks.
 - [requirements.txt](requirements.txt): Streamlit dependency.
 
-The code, written answers and simulated challenge were prepared with AI help. The in-person paper drawing, no-AI oral explanation, classmate exchange and Brightspace quiz are separate class activities and are not claimed as completed here.
-
-Assignment: [Lab 15 - Portfolio Stability Decision](https://github.com/CinderZhang/FIN43900-Fall2026/blob/main/lessons/week-09/lab-15-portfolio-stability.md).
