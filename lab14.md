@@ -130,3 +130,41 @@ Why does the portfolio-volatility loop include both covariance[i][j] and covaria
 **My answer:** We include both covariance[i][j] and covariance[j][i] because both represent how the two assets move together, and both cross terms are needed to calculate the portfolio's total variance correctly.
 
 If we left out both cross terms, the benchmark's calculated volatility would be lower, dropping from 10.46% to 9.90%. This is because the correlation between bonds and equities is positive (0.25), so the covariance terms add to the portfolio's risk. Removing them would underestimate the actual volatility.
+
+## Before Thursday - my fund universe
+
+My Project 2 client is the Campus Scholarship Reserve from Lab 13. It has $1 million, a seven-year horizon, and $10,000 quarterly scholarship payments. It needs at least $40,000, or 4%, in eligible reserves and aims for CPI + 3% over rolling five-year periods. I chose four funds so each part of the portfolio has a clear job.
+
+| Ticker | Full fund name | Role in my portfolio | Why I included it |
+|---|---|---|---|
+| BIL | State Street SPDR Bloomberg 1-3 Month T-Bill ETF | Cash and reserves | Short-term Treasury bills provide a cash-like sleeve for scholarship payments. This is the main fund I would use for the reserve allocation. |
+| IEF | iShares 7-10 Year Treasury Bond ETF | Government bonds | Adds Treasury exposure beyond short-term bills. Its price can move with interest rates, so it is not the same as cash. |
+| LQD | iShares iBoxx $ Investment Grade Corporate Bond ETF | Fixed income | Adds diversified investment-grade corporate bonds and a different source of income. |
+| VT | Vanguard Total World Stock ETF | Global equity | Adds global stocks for long-term growth toward the return objective. |
+
+Fund details checked on the issuer pages: [BIL](https://www.ssga.com/us/en/individual/etfs/state-street-spdr-bloomberg-1-3-month-t-bill-etf-bil), [IEF](https://www.ishares.com/us/products/239456/ishares-710-year-treasury-bond-etf), [LQD](https://www.ishares.com/us/products/239566/lqd-ishares-iboxx-investment-grade-corporate-bond-etf), and [VT](https://advisors.vanguard.com/investments/products/vt/vanguard-total-world-stock-etf).
+
+These funds map to the four roles used in the lab. For the classroom model, BIL and IEF represent the reserve-eligible government sleeves. I would mainly use BIL for near-term payments because IEF has more interest-rate risk. LQD and VT are not reserve sleeves. This selects the investments; it does not set their final portfolio weights.
+
+My own client's objective is CPI + 3%, which would be 5.5% using the lab's 2.5% CPI estimate. Meridian's 6.5% objective in `portfolio.py` stays separate from my client's target.
+
+## Monthly price data
+
+The combined file is [prices.csv](prices.csv). Its columns are `Date,BIL,IEF,LQD,VT`, with the oldest month first. All prices are in U.S. dollars and use Yahoo Finance's **Adj Close**, which adjusts historical closing prices for distributions and splits.
+
+| Ticker | Price source | Download date |
+|---|---|---|
+| BIL | [Yahoo Finance historical data](https://finance.yahoo.com/quote/BIL/history/) | October 22, 2026 |
+| IEF | [Yahoo Finance historical data](https://finance.yahoo.com/quote/IEF/history/) | October 22, 2026 |
+| LQD | [Yahoo Finance historical data](https://finance.yahoo.com/quote/LQD/history/) | October 22, 2026 |
+| VT | [Yahoo Finance historical data](https://finance.yahoo.com/quote/VT/history/) | October 22, 2026 |
+
+The download used Yahoo Finance's chart endpoint. It retrieved daily adjusted closes and kept the last trading day's value in each completed month. That gives monthly observations dated on their actual trading days, rather than monthly averages. No prices were interpolated or forward-filled.
+
+The file contains **61 month-end prices per fund, from September 30, 2021 through September 30, 2026**. September 2021 is the starting observation, so the data can produce **60 monthly returns from October 2021 through September 2026**. October 2026 is excluded because it was still in progress on the download date.
+
+Checks on the saved file found all 61 months, four complete numeric price columns, no missing or nonpositive prices, no duplicate dates, and matching dates across funds. The file is sorted from oldest to newest. Each price matches the corresponding saved source observation.
+
+Adjusted prices can be revised by the provider after later distributions. The downloaded snapshot is saved in [data/prices_source.json](data/prices_source.json), along with the exact request URLs, download timestamp, original closing prices and selected adjusted closes. [download_prices.py](download_prices.py) reproduces the download with `python download_prices.py` using Python's standard library.
+
+For Thursday, monthly returns can be calculated as `current adjusted price / previous adjusted price - 1`. Those returns will provide historical estimates for my fund universe. The course training values in `portfolio.py` remain unchanged so Meridian can still be checked against the known answer.
