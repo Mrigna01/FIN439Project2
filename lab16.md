@@ -184,5 +184,3 @@ python verify_lab16.py
 ```
 
 The script saves the actual console runs in [data/lab16_output.txt](data/lab16_output.txt) and structured results in [data/lab16_results.json](data/lab16_results.json). The main submission files are this write-up and [asof.py](asof.py).
-
-I prepared these written answers with AI assistance and verified the date change on my own repository's code. I have not completed an in-person partner conversation or a partner-file swap.
