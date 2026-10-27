@@ -16,6 +16,7 @@ The app starts with Meridian's training inputs. Select **Campus Scholarship Rese
 - [Lab 13: mandate](lab13.md)
 - [Lab 14: baselines and fund selection](lab14.md)
 - [Lab 15: stability decision and computed results](lab15.md)
+- [Lab 16: provenance gate and point-in-time signals](lab16.md)
 
 ## Checks
 
@@ -24,6 +25,8 @@ python mandate.py
 python portfolio.py
 python verify_lab14.py
 python verify_lab15.py
+python asof.py
+python verify_lab16.py
 ```
 
 `portfolio.py` retains the Lab 14 printed results. The Lab 15 verification script also writes `data/lab15_results.json` with the computed scenarios. The temporary correlation test restores the original engine file after checking it.
@@ -31,3 +34,5 @@ python verify_lab15.py
 The saved `prices.csv` snapshot uses SGOV, SCHR, USIG and VT, with 61 monthly prices per fund and 60 monthly returns. Sources and the October 22, 2026 download date are recorded in the write-ups and `data/prices_source.json`. Running `python download_prices.py` refreshes the same date range; provider revisions may change historical adjusted prices, so rerun the checks and review the write-up if refreshing.
 
 Built with AI help as a learning demonstration, not investment advice.
+
+Lab 16 uses a separate fictional training table. Run `python asof.py --decision-date 2026-04-15` to verify that the later-date signals equal the naive signals. The default cutoff remains March 31, 2026. `verify_lab16.py` saves the computed evidence under `data/`.

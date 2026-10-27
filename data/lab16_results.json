@@ -1,0 +1,644 @@
+{
+  "assignment_commit": "5e6970110e86ea5487b1e0ec8eb9add94e44f8c6",
+  "baseline": {
+    "asof": {
+      "decision_date": "2026-03-31",
+      "input_count": 12,
+      "funnel": [
+        {
+          "rule": "No ticker",
+          "status": "quarantined",
+          "count": 1,
+          "rows": [
+            11
+          ],
+          "remaining": 11
+        },
+        {
+          "rule": "Exact duplicate",
+          "status": "removed",
+          "count": 1,
+          "rows": [
+            7
+          ],
+          "remaining": 10
+        },
+        {
+          "rule": "Published after decision date",
+          "status": "removed",
+          "count": 3,
+          "rows": [
+            3,
+            8,
+            10
+          ],
+          "remaining": 7
+        },
+        {
+          "rule": "Older vintage replaced by a revision",
+          "status": "removed",
+          "count": 1,
+          "rows": [
+            2
+          ],
+          "remaining": 6
+        }
+      ],
+      "panel": [
+        {
+          "row": 1,
+          "ticker": "AAA",
+          "month": "2026-01",
+          "published": "2026-02-10",
+          "price": 101.0
+        },
+        {
+          "row": 4,
+          "ticker": "AAA",
+          "month": "2026-02",
+          "published": "2026-03-25",
+          "price": 103.0
+        },
+        {
+          "row": 5,
+          "ticker": "BBB",
+          "month": "2026-01",
+          "published": "2026-02-10",
+          "price": 98.0
+        },
+        {
+          "row": 6,
+          "ticker": "BBB",
+          "month": "2026-02",
+          "published": "2026-03-10",
+          "price": 97.0
+        },
+        {
+          "row": 9,
+          "ticker": "CCC",
+          "month": "2026-01",
+          "published": "2026-02-10",
+          "price": 110.0
+        },
+        {
+          "row": 12,
+          "ticker": "CCC",
+          "month": "2026-02",
+          "published": "2026-03-10",
+          "price": 111.0
+        }
+      ]
+    },
+    "naive": {
+      "decision_date": null,
+      "input_count": 12,
+      "funnel": [
+        {
+          "rule": "No ticker",
+          "status": "quarantined",
+          "count": 1,
+          "rows": [
+            11
+          ],
+          "remaining": 11
+        },
+        {
+          "rule": "Exact duplicate",
+          "status": "removed",
+          "count": 1,
+          "rows": [
+            7
+          ],
+          "remaining": 10
+        },
+        {
+          "rule": "Published after decision date",
+          "status": "removed",
+          "count": 0,
+          "rows": [],
+          "remaining": 10
+        },
+        {
+          "rule": "Older vintage replaced by a revision",
+          "status": "removed",
+          "count": 2,
+          "rows": [
+            2,
+            12
+          ],
+          "remaining": 8
+        }
+      ],
+      "panel": [
+        {
+          "row": 1,
+          "ticker": "AAA",
+          "month": "2026-01",
+          "published": "2026-02-10",
+          "price": 101.0
+        },
+        {
+          "row": 4,
+          "ticker": "AAA",
+          "month": "2026-02",
+          "published": "2026-03-25",
+          "price": 103.0
+        },
+        {
+          "row": 3,
+          "ticker": "AAA",
+          "month": "2026-03",
+          "published": "2026-04-10",
+          "price": 109.0
+        },
+        {
+          "row": 5,
+          "ticker": "BBB",
+          "month": "2026-01",
+          "published": "2026-02-10",
+          "price": 98.0
+        },
+        {
+          "row": 6,
+          "ticker": "BBB",
+          "month": "2026-02",
+          "published": "2026-03-10",
+          "price": 97.0
+        },
+        {
+          "row": 8,
+          "ticker": "BBB",
+          "month": "2026-03",
+          "published": "2026-04-10",
+          "price": 92.0
+        },
+        {
+          "row": 9,
+          "ticker": "CCC",
+          "month": "2026-01",
+          "published": "2026-02-10",
+          "price": 110.0
+        },
+        {
+          "row": 10,
+          "ticker": "CCC",
+          "month": "2026-02",
+          "published": "2026-04-05",
+          "price": 112.0
+        }
+      ]
+    },
+    "asof_signals": {
+      "AAA": {
+        "month": "2026-02",
+        "latest_row": 4,
+        "return": 0.01980198019801982,
+        "previous_month": "2026-01",
+        "previous_row": 1
+      },
+      "BBB": {
+        "month": "2026-02",
+        "latest_row": 6,
+        "return": -0.010204081632653073,
+        "previous_month": "2026-01",
+        "previous_row": 5
+      },
+      "CCC": {
+        "month": "2026-02",
+        "latest_row": 12,
+        "return": 0.009090909090909038,
+        "previous_month": "2026-01",
+        "previous_row": 9
+      }
+    },
+    "naive_signals": {
+      "AAA": {
+        "month": "2026-03",
+        "latest_row": 3,
+        "return": 0.058252427184465994,
+        "previous_month": "2026-02",
+        "previous_row": 4
+      },
+      "BBB": {
+        "month": "2026-03",
+        "latest_row": 8,
+        "return": -0.05154639175257736,
+        "previous_month": "2026-02",
+        "previous_row": 6
+      },
+      "CCC": {
+        "month": "2026-02",
+        "latest_row": 10,
+        "return": 0.018181818181818077,
+        "previous_month": "2026-01",
+        "previous_row": 9
+      }
+    },
+    "sanity": [
+      {
+        "row": 1,
+        "ticker": "AAA",
+        "month": "2026-01",
+        "published": "2026-02-10",
+        "price": 101.0,
+        "yield": -0.00990099009900991,
+        "flags": [
+          "negative yield"
+        ]
+      },
+      {
+        "row": 4,
+        "ticker": "AAA",
+        "month": "2026-02",
+        "published": "2026-03-25",
+        "price": 103.0,
+        "yield": -0.029126213592232997,
+        "flags": [
+          "negative yield"
+        ]
+      },
+      {
+        "row": 5,
+        "ticker": "BBB",
+        "month": "2026-01",
+        "published": "2026-02-10",
+        "price": 98.0,
+        "yield": 0.020408163265306145,
+        "flags": []
+      },
+      {
+        "row": 6,
+        "ticker": "BBB",
+        "month": "2026-02",
+        "published": "2026-03-10",
+        "price": 97.0,
+        "yield": 0.030927835051546282,
+        "flags": []
+      },
+      {
+        "row": 9,
+        "ticker": "CCC",
+        "month": "2026-01",
+        "published": "2026-02-10",
+        "price": 110.0,
+        "yield": -0.09090909090909094,
+        "flags": [
+          "negative yield",
+          "not priced below AAA",
+          "not priced below BBB"
+        ]
+      },
+      {
+        "row": 12,
+        "ticker": "CCC",
+        "month": "2026-02",
+        "published": "2026-03-10",
+        "price": 111.0,
+        "yield": -0.09909909909909909,
+        "flags": [
+          "negative yield",
+          "not priced below AAA",
+          "not priced below BBB"
+        ]
+      }
+    ]
+  },
+  "later_date": {
+    "asof": {
+      "decision_date": "2026-04-15",
+      "input_count": 12,
+      "funnel": [
+        {
+          "rule": "No ticker",
+          "status": "quarantined",
+          "count": 1,
+          "rows": [
+            11
+          ],
+          "remaining": 11
+        },
+        {
+          "rule": "Exact duplicate",
+          "status": "removed",
+          "count": 1,
+          "rows": [
+            7
+          ],
+          "remaining": 10
+        },
+        {
+          "rule": "Published after decision date",
+          "status": "removed",
+          "count": 0,
+          "rows": [],
+          "remaining": 10
+        },
+        {
+          "rule": "Older vintage replaced by a revision",
+          "status": "removed",
+          "count": 2,
+          "rows": [
+            2,
+            12
+          ],
+          "remaining": 8
+        }
+      ],
+      "panel": [
+        {
+          "row": 1,
+          "ticker": "AAA",
+          "month": "2026-01",
+          "published": "2026-02-10",
+          "price": 101.0
+        },
+        {
+          "row": 4,
+          "ticker": "AAA",
+          "month": "2026-02",
+          "published": "2026-03-25",
+          "price": 103.0
+        },
+        {
+          "row": 3,
+          "ticker": "AAA",
+          "month": "2026-03",
+          "published": "2026-04-10",
+          "price": 109.0
+        },
+        {
+          "row": 5,
+          "ticker": "BBB",
+          "month": "2026-01",
+          "published": "2026-02-10",
+          "price": 98.0
+        },
+        {
+          "row": 6,
+          "ticker": "BBB",
+          "month": "2026-02",
+          "published": "2026-03-10",
+          "price": 97.0
+        },
+        {
+          "row": 8,
+          "ticker": "BBB",
+          "month": "2026-03",
+          "published": "2026-04-10",
+          "price": 92.0
+        },
+        {
+          "row": 9,
+          "ticker": "CCC",
+          "month": "2026-01",
+          "published": "2026-02-10",
+          "price": 110.0
+        },
+        {
+          "row": 10,
+          "ticker": "CCC",
+          "month": "2026-02",
+          "published": "2026-04-05",
+          "price": 112.0
+        }
+      ]
+    },
+    "naive": {
+      "decision_date": null,
+      "input_count": 12,
+      "funnel": [
+        {
+          "rule": "No ticker",
+          "status": "quarantined",
+          "count": 1,
+          "rows": [
+            11
+          ],
+          "remaining": 11
+        },
+        {
+          "rule": "Exact duplicate",
+          "status": "removed",
+          "count": 1,
+          "rows": [
+            7
+          ],
+          "remaining": 10
+        },
+        {
+          "rule": "Published after decision date",
+          "status": "removed",
+          "count": 0,
+          "rows": [],
+          "remaining": 10
+        },
+        {
+          "rule": "Older vintage replaced by a revision",
+          "status": "removed",
+          "count": 2,
+          "rows": [
+            2,
+            12
+          ],
+          "remaining": 8
+        }
+      ],
+      "panel": [
+        {
+          "row": 1,
+          "ticker": "AAA",
+          "month": "2026-01",
+          "published": "2026-02-10",
+          "price": 101.0
+        },
+        {
+          "row": 4,
+          "ticker": "AAA",
+          "month": "2026-02",
+          "published": "2026-03-25",
+          "price": 103.0
+        },
+        {
+          "row": 3,
+          "ticker": "AAA",
+          "month": "2026-03",
+          "published": "2026-04-10",
+          "price": 109.0
+        },
+        {
+          "row": 5,
+          "ticker": "BBB",
+          "month": "2026-01",
+          "published": "2026-02-10",
+          "price": 98.0
+        },
+        {
+          "row": 6,
+          "ticker": "BBB",
+          "month": "2026-02",
+          "published": "2026-03-10",
+          "price": 97.0
+        },
+        {
+          "row": 8,
+          "ticker": "BBB",
+          "month": "2026-03",
+          "published": "2026-04-10",
+          "price": 92.0
+        },
+        {
+          "row": 9,
+          "ticker": "CCC",
+          "month": "2026-01",
+          "published": "2026-02-10",
+          "price": 110.0
+        },
+        {
+          "row": 10,
+          "ticker": "CCC",
+          "month": "2026-02",
+          "published": "2026-04-05",
+          "price": 112.0
+        }
+      ]
+    },
+    "asof_signals": {
+      "AAA": {
+        "month": "2026-03",
+        "latest_row": 3,
+        "return": 0.058252427184465994,
+        "previous_month": "2026-02",
+        "previous_row": 4
+      },
+      "BBB": {
+        "month": "2026-03",
+        "latest_row": 8,
+        "return": -0.05154639175257736,
+        "previous_month": "2026-02",
+        "previous_row": 6
+      },
+      "CCC": {
+        "month": "2026-02",
+        "latest_row": 10,
+        "return": 0.018181818181818077,
+        "previous_month": "2026-01",
+        "previous_row": 9
+      }
+    },
+    "naive_signals": {
+      "AAA": {
+        "month": "2026-03",
+        "latest_row": 3,
+        "return": 0.058252427184465994,
+        "previous_month": "2026-02",
+        "previous_row": 4
+      },
+      "BBB": {
+        "month": "2026-03",
+        "latest_row": 8,
+        "return": -0.05154639175257736,
+        "previous_month": "2026-02",
+        "previous_row": 6
+      },
+      "CCC": {
+        "month": "2026-02",
+        "latest_row": 10,
+        "return": 0.018181818181818077,
+        "previous_month": "2026-01",
+        "previous_row": 9
+      }
+    },
+    "sanity": [
+      {
+        "row": 1,
+        "ticker": "AAA",
+        "month": "2026-01",
+        "published": "2026-02-10",
+        "price": 101.0,
+        "yield": -0.00990099009900991,
+        "flags": [
+          "negative yield"
+        ]
+      },
+      {
+        "row": 4,
+        "ticker": "AAA",
+        "month": "2026-02",
+        "published": "2026-03-25",
+        "price": 103.0,
+        "yield": -0.029126213592232997,
+        "flags": [
+          "negative yield"
+        ]
+      },
+      {
+        "row": 3,
+        "ticker": "AAA",
+        "month": "2026-03",
+        "published": "2026-04-10",
+        "price": 109.0,
+        "yield": -0.08256880733944949,
+        "flags": [
+          "negative yield"
+        ]
+      },
+      {
+        "row": 5,
+        "ticker": "BBB",
+        "month": "2026-01",
+        "published": "2026-02-10",
+        "price": 98.0,
+        "yield": 0.020408163265306145,
+        "flags": []
+      },
+      {
+        "row": 6,
+        "ticker": "BBB",
+        "month": "2026-02",
+        "published": "2026-03-10",
+        "price": 97.0,
+        "yield": 0.030927835051546282,
+        "flags": []
+      },
+      {
+        "row": 8,
+        "ticker": "BBB",
+        "month": "2026-03",
+        "published": "2026-04-10",
+        "price": 92.0,
+        "yield": 0.08695652173913038,
+        "flags": []
+      },
+      {
+        "row": 9,
+        "ticker": "CCC",
+        "month": "2026-01",
+        "published": "2026-02-10",
+        "price": 110.0,
+        "yield": -0.09090909090909094,
+        "flags": [
+          "negative yield",
+          "not priced below AAA",
+          "not priced below BBB"
+        ]
+      },
+      {
+        "row": 10,
+        "ticker": "CCC",
+        "month": "2026-02",
+        "published": "2026-04-05",
+        "price": 112.0,
+        "yield": -0.1071428571428571,
+        "flags": [
+          "negative yield",
+          "not priced below AAA",
+          "not priced below BBB"
+        ]
+      }
+    ]
+  },
+  "verification": {
+    "tests_run": 9,
+    "passed": true
+  }
+}

@@ -1,0 +1,69 @@
+Lab 16 - Provenance gate | Decision date: 2026-03-31
+Input: 12 rows
+1. No ticker: 1 quarantined; rows 11; 11 remain
+2. Exact duplicate: 1 removed; rows 7; 10 remain
+3. Published after decision date: 3 removed; rows 3, 8, 10; 7 remain
+4. Older vintage replaced by a revision: 1 removed; rows 2; 6 remain
+
+As-of panel
+Row  Ticker  Month    Published   Price
+  1  AAA     2026-01  2026-02-10  101.0
+  4  AAA     2026-02  2026-03-25  103.0
+  5  BBB     2026-01  2026-02-10  98.0
+  6  BBB     2026-02  2026-03-10  97.0
+  9  CCC     2026-01  2026-02-10  110.0
+ 12  CCC     2026-02  2026-03-10  111.0
+
+Signals: as-of versus naive (latest publication, no date cutoff)
+AAA: as-of +1.98% (February 2026; rows 1 -> 4)
+     naive +5.83% (March 2026; rows 4 -> 3)
+BBB: as-of -1.02% (February 2026; rows 5 -> 6)
+     naive -5.15% (March 2026; rows 6 -> 8)
+CCC: as-of +0.91% (February 2026; rows 9 -> 12)
+     naive +1.82% (February 2026; rows 9 -> 10)
+
+Separate sanity check: one-year zero-coupon bonds, face value 100
+Row 1: AAA 2026-01, yield -0.99%; negative yield
+Row 4: AAA 2026-02, yield -2.91%; negative yield
+Row 5: BBB 2026-01, yield +2.04%; no stated sanity rule broken
+Row 6: BBB 2026-02, yield +3.09%; no stated sanity rule broken
+Row 9: CCC 2026-01, yield -9.09%; negative yield; not priced below AAA; not priced below BBB
+Row 12: CCC 2026-02, yield -9.91%; negative yield; not priced below AAA; not priced below BBB
+
+--- Later-date verification (local test, not a partner exchange) ---
+
+Lab 16 - Provenance gate | Decision date: 2026-04-15
+Input: 12 rows
+1. No ticker: 1 quarantined; rows 11; 11 remain
+2. Exact duplicate: 1 removed; rows 7; 10 remain
+3. Published after decision date: 0 removed; rows none; 10 remain
+4. Older vintage replaced by a revision: 2 removed; rows 2, 12; 8 remain
+
+As-of panel
+Row  Ticker  Month    Published   Price
+  1  AAA     2026-01  2026-02-10  101.0
+  4  AAA     2026-02  2026-03-25  103.0
+  3  AAA     2026-03  2026-04-10  109.0
+  5  BBB     2026-01  2026-02-10  98.0
+  6  BBB     2026-02  2026-03-10  97.0
+  8  BBB     2026-03  2026-04-10  92.0
+  9  CCC     2026-01  2026-02-10  110.0
+ 10  CCC     2026-02  2026-04-05  112.0
+
+Signals: as-of versus naive (latest publication, no date cutoff)
+AAA: as-of +5.83% (March 2026; rows 4 -> 3)
+     naive +5.83% (March 2026; rows 4 -> 3)
+BBB: as-of -5.15% (March 2026; rows 6 -> 8)
+     naive -5.15% (March 2026; rows 6 -> 8)
+CCC: as-of +1.82% (February 2026; rows 9 -> 10)
+     naive +1.82% (February 2026; rows 9 -> 10)
+
+Separate sanity check: one-year zero-coupon bonds, face value 100
+Row 1: AAA 2026-01, yield -0.99%; negative yield
+Row 4: AAA 2026-02, yield -2.91%; negative yield
+Row 3: AAA 2026-03, yield -8.26%; negative yield
+Row 5: BBB 2026-01, yield +2.04%; no stated sanity rule broken
+Row 6: BBB 2026-02, yield +3.09%; no stated sanity rule broken
+Row 8: BBB 2026-03, yield +8.70%; no stated sanity rule broken
+Row 9: CCC 2026-01, yield -9.09%; negative yield; not priced below AAA; not priced below BBB
+Row 10: CCC 2026-02, yield -10.71%; negative yield; not priced below AAA; not priced below BBB
