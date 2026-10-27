@@ -149,6 +149,32 @@ The API's real-time interval describes when information was known, with inclusiv
 
 **What does this mean for my Project 2 data?** The October 22 download date in my ETF source file establishes when that snapshot was collected. It does not prove those exact adjusted historical prices were available on every earlier decision date. Adjusted prices can be revised, so the Lab 15 sample-window comparison is a sensitivity exercise, not a point-in-time trading backtest. This lab's filter needs actual publication/vintage records before it can make that stronger claim for real data.
 
+## Quiz and discussion answers
+
+**Which February value should I keep for AAA on March 31? Why should I exclude March's 109?**
+
+I keep 103, published on March 25, because it is the latest February revision available by my March 31 decision date. The earlier value of 104 was replaced before that date. I exclude March's 109 because it was published on April 10, after my decision. Using it would give my model information I could not have known at the time.
+
+**How do I explain the measured month versus the publication date?**
+
+I think of the measured month as the period the number describes and the publication date as the day I can start using it. A number about February might arrive in March or even April. I decide whether it belongs in my March 31 information set by checking when it was published, not just the month written beside it.
+
+**How do I explain the revision-selection code?**
+
+I first remove publications after my decision date. I then sort the remaining records by publication date and use `(ticker, month)` as the dictionary key. When I encounter a newer publication for the same key, I replace the older record. That lets me keep the latest version I actually could have known while keeping different funds and different months separate.
+
+**Why do I filter by publication date before selecting the latest revision?**
+
+If I select the latest version first, I might choose a revision from the future. Removing that revision afterward could leave me with no record for that month, even though an older usable value exists. For CCC's February observation, I need row 12 with a price of 111 on March 31; row 10 with a price of 112 only becomes available on April 5.
+
+**What happens when I move the cutoff to April 15 and then restore March 31?**
+
+In my local test, April 15 admits every publication date in the table. My as-of signals become AAA +5.83%, BBB -5.15% and CCC +1.82%, matching the naive signals exactly. Running again with the unchanged March 31 default gives AAA +1.98%, BBB -1.02% and CCC +0.91%. This shows that the difference comes from later publications and revisions, not from changing the return formula.
+
+**What does the later-date test prove?**
+
+I can reproduce the naive results once I move the decision date past all the publication dates. That supports the timing logic, but it does not make the questionable bond prices economically sound. I still need the separate sanity check.
+
 ## Verification and files
 
 All nine checks in [verify_lab16.py](verify_lab16.py) passed: known funnel and complete row accounting, known signals, later-date equality, inclusive cutoff and revision timing, shuffled input order, rule precedence, separate sanity flags, same-date conflicts, and unavailable signals for insufficient history or a zero denominator.
@@ -159,4 +185,4 @@ python verify_lab16.py
 
 The script saves the actual console runs in [data/lab16_output.txt](data/lab16_output.txt) and structured results in [data/lab16_results.json](data/lab16_results.json). The main submission files are this write-up and [asof.py](asof.py).
 
-The partner conversation, no-AI oral explanation and partner-file swap are excluded from this work, as requested. The later-date run above provides local technical evidence without claiming those activities took place.
+I prepared these written answers with AI assistance and verified the date change on my own repository's code. I have not completed an in-person partner conversation or a partner-file swap.
