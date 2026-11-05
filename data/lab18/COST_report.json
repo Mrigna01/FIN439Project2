@@ -1,0 +1,410 @@
+{
+  "ticker": "COST",
+  "company": "COSTCO WHOLESALE CORP /NEW",
+  "cik": 909832,
+  "rows": [
+    {
+      "fiscal_end": "2022-08-28",
+      "revenue": 226954000000,
+      "net_income": 5844000000,
+      "operating_cash_flow": 7392000000,
+      "capital_spending": 3891000000,
+      "equity": 20642000000,
+      "roe": 0.2831121015405484,
+      "owner_earnings": 3501000000,
+      "facts": {
+        "revenue": {
+          "value": 226954000000,
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "source": {
+            "start": "2021-08-30",
+            "end": "2022-08-28",
+            "filed": "2024-10-09",
+            "accn": "0000909832-24-000049",
+            "form": "10-K",
+            "fy": 2024,
+            "fp": "FY"
+          }
+        },
+        "net_income": {
+          "value": 5844000000,
+          "tag": "us-gaap:NetIncomeLoss",
+          "source": {
+            "start": "2021-08-30",
+            "end": "2022-08-28",
+            "filed": "2024-10-09",
+            "accn": "0000909832-24-000049",
+            "form": "10-K",
+            "fy": 2024,
+            "fp": "FY"
+          }
+        },
+        "operating_cash_flow": {
+          "value": 7392000000,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source": {
+            "start": "2021-08-30",
+            "end": "2022-08-28",
+            "filed": "2024-10-09",
+            "accn": "0000909832-24-000049",
+            "form": "10-K",
+            "fy": 2024,
+            "fp": "FY"
+          }
+        },
+        "capital_spending": {
+          "value": 3891000000,
+          "tag": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "source": {
+            "start": "2021-08-30",
+            "end": "2022-08-28",
+            "filed": "2024-10-09",
+            "accn": "0000909832-24-000049",
+            "form": "10-K",
+            "fy": 2024,
+            "fp": "FY"
+          }
+        },
+        "equity": {
+          "value": 20642000000,
+          "tag": "us-gaap:StockholdersEquity",
+          "source": {
+            "end": "2022-08-28",
+            "filed": "2023-10-11",
+            "accn": "0000909832-23-000042",
+            "form": "10-K",
+            "fy": 2023,
+            "fp": "FY"
+          }
+        }
+      }
+    },
+    {
+      "fiscal_end": "2023-09-03",
+      "revenue": 242290000000,
+      "net_income": 6292000000,
+      "operating_cash_flow": 11068000000,
+      "capital_spending": 4323000000,
+      "equity": 25058000000,
+      "roe": 0.2510974539069359,
+      "owner_earnings": 6745000000,
+      "facts": {
+        "revenue": {
+          "value": 242290000000,
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "source": {
+            "start": "2022-08-29",
+            "end": "2023-09-03",
+            "filed": "2025-10-08",
+            "accn": "0000909832-25-000101",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        },
+        "net_income": {
+          "value": 6292000000,
+          "tag": "us-gaap:NetIncomeLoss",
+          "source": {
+            "start": "2022-08-29",
+            "end": "2023-09-03",
+            "filed": "2025-10-08",
+            "accn": "0000909832-25-000101",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        },
+        "operating_cash_flow": {
+          "value": 11068000000,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source": {
+            "start": "2022-08-29",
+            "end": "2023-09-03",
+            "filed": "2025-10-08",
+            "accn": "0000909832-25-000101",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        },
+        "capital_spending": {
+          "value": 4323000000,
+          "tag": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "source": {
+            "start": "2022-08-29",
+            "end": "2023-09-03",
+            "filed": "2025-10-08",
+            "accn": "0000909832-25-000101",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        },
+        "equity": {
+          "value": 25058000000,
+          "tag": "us-gaap:StockholdersEquity",
+          "source": {
+            "end": "2023-09-03",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        }
+      }
+    },
+    {
+      "fiscal_end": "2024-09-01",
+      "revenue": 254453000000,
+      "net_income": 7367000000,
+      "operating_cash_flow": 11339000000,
+      "capital_spending": 4710000000,
+      "equity": 23622000000,
+      "roe": 0.3118702904072475,
+      "owner_earnings": 6629000000,
+      "facts": {
+        "revenue": {
+          "value": 254453000000,
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "source": {
+            "start": "2023-09-04",
+            "end": "2024-09-01",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        },
+        "net_income": {
+          "value": 7367000000,
+          "tag": "us-gaap:NetIncomeLoss",
+          "source": {
+            "start": "2023-09-04",
+            "end": "2024-09-01",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        },
+        "operating_cash_flow": {
+          "value": 11339000000,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source": {
+            "start": "2023-09-04",
+            "end": "2024-09-01",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        },
+        "capital_spending": {
+          "value": 4710000000,
+          "tag": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "source": {
+            "start": "2023-09-04",
+            "end": "2024-09-01",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        },
+        "equity": {
+          "value": 23622000000,
+          "tag": "us-gaap:StockholdersEquity",
+          "source": {
+            "end": "2024-09-01",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        }
+      }
+    },
+    {
+      "fiscal_end": "2025-08-31",
+      "revenue": 275235000000,
+      "net_income": 8099000000,
+      "operating_cash_flow": 13335000000,
+      "capital_spending": 5498000000,
+      "equity": 29164000000,
+      "roe": 0.27770539020710466,
+      "owner_earnings": 7837000000,
+      "facts": {
+        "revenue": {
+          "value": 275235000000,
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "source": {
+            "start": "2024-09-02",
+            "end": "2025-08-31",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        },
+        "net_income": {
+          "value": 8099000000,
+          "tag": "us-gaap:NetIncomeLoss",
+          "source": {
+            "start": "2024-09-02",
+            "end": "2025-08-31",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        },
+        "operating_cash_flow": {
+          "value": 13335000000,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source": {
+            "start": "2024-09-02",
+            "end": "2025-08-31",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        },
+        "capital_spending": {
+          "value": 5498000000,
+          "tag": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "source": {
+            "start": "2024-09-02",
+            "end": "2025-08-31",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        },
+        "equity": {
+          "value": 29164000000,
+          "tag": "us-gaap:StockholdersEquity",
+          "source": {
+            "end": "2025-08-31",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        }
+      }
+    },
+    {
+      "fiscal_end": "2026-08-30",
+      "revenue": 303154000000,
+      "net_income": 9226000000,
+      "operating_cash_flow": 15817000000,
+      "capital_spending": 6435000000,
+      "equity": 35803000000,
+      "roe": 0.25768790324833113,
+      "owner_earnings": 9382000000,
+      "facts": {
+        "revenue": {
+          "value": 303154000000,
+          "tag": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "source": {
+            "start": "2025-09-01",
+            "end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        },
+        "net_income": {
+          "value": 9226000000,
+          "tag": "us-gaap:NetIncomeLoss",
+          "source": {
+            "start": "2025-09-01",
+            "end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        },
+        "operating_cash_flow": {
+          "value": 15817000000,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source": {
+            "start": "2025-09-01",
+            "end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        },
+        "capital_spending": {
+          "value": 6435000000,
+          "tag": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "source": {
+            "start": "2025-09-01",
+            "end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        },
+        "equity": {
+          "value": 35803000000,
+          "tag": "us-gaap:StockholdersEquity",
+          "source": {
+            "end": "2026-08-30",
+            "filed": "2026-10-07",
+            "accn": "0000909832-26-000093",
+            "form": "10-K",
+            "fy": 2026,
+            "fp": "FY"
+          }
+        }
+      }
+    }
+  ],
+  "checks": [
+    {
+      "check": "ROE of 15.0% or more every year",
+      "status": "pass"
+    },
+    {
+      "check": "Owner earnings positive every year",
+      "status": "pass"
+    },
+    {
+      "check": "Owner earnings grew, first year to last",
+      "status": "pass"
+    }
+  ],
+  "facts_sha256": "fad48d5a28b111b19dad912f3461975d584bf2a32699df55697388fe037def4b",
+  "provenance": {
+    "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000909832.json",
+    "ticker_map_url": "https://www.sec.gov/files/company_tickers.json",
+    "downloaded_at_utc": "2026-11-05T20:42:54.531735+00:00",
+    "raw_response_sha256": "b675ced201b27ede2b0d26ca6fd873befe96a1afa9679339a2d0b964187dcdff",
+    "snapshot_scope": "Unmodified relevant USD 10-K fact records for the last five annual net-income period ends; other tags omitted."
+  },
+  "warnings": []
+}

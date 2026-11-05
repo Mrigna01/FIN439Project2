@@ -1,0 +1,370 @@
+{
+  "ticker": "JPM",
+  "company": "JPMORGAN CHASE & CO",
+  "cik": 19617,
+  "rows": [
+    {
+      "fiscal_end": "2021-12-31",
+      "revenue": 121649000000,
+      "net_income": 48334000000,
+      "operating_cash_flow": 78084000000,
+      "capital_spending": null,
+      "equity": 294127000000,
+      "roe": 0.16433037429409744,
+      "owner_earnings": null,
+      "facts": {
+        "revenue": {
+          "value": 121649000000,
+          "tag": "us-gaap:Revenues",
+          "source": {
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "filed": "2024-02-16",
+            "accn": "0000019617-24-000225",
+            "form": "10-K",
+            "fy": 2023,
+            "fp": "FY"
+          }
+        },
+        "net_income": {
+          "value": 48334000000,
+          "tag": "us-gaap:NetIncomeLoss",
+          "source": {
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "filed": "2024-02-16",
+            "accn": "0000019617-24-000225",
+            "form": "10-K",
+            "fy": 2023,
+            "fp": "FY"
+          }
+        },
+        "operating_cash_flow": {
+          "value": 78084000000,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source": {
+            "start": "2021-01-01",
+            "end": "2021-12-31",
+            "filed": "2024-02-16",
+            "accn": "0000019617-24-000225",
+            "form": "10-K",
+            "fy": 2023,
+            "fp": "FY"
+          }
+        },
+        "capital_spending": {
+          "value": null,
+          "tag": null,
+          "source": null
+        },
+        "equity": {
+          "value": 294127000000,
+          "tag": "us-gaap:StockholdersEquity",
+          "source": {
+            "end": "2021-12-31",
+            "filed": "2024-02-16",
+            "accn": "0000019617-24-000225",
+            "form": "10-K",
+            "fy": 2023,
+            "fp": "FY"
+          }
+        }
+      }
+    },
+    {
+      "fiscal_end": "2022-12-31",
+      "revenue": 128695000000,
+      "net_income": 37676000000,
+      "operating_cash_flow": 107119000000,
+      "capital_spending": null,
+      "equity": 292332000000,
+      "roe": 0.12888086148625535,
+      "owner_earnings": null,
+      "facts": {
+        "revenue": {
+          "value": 128695000000,
+          "tag": "us-gaap:Revenues",
+          "source": {
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "filed": "2025-02-14",
+            "accn": "0000019617-25-000270",
+            "form": "10-K",
+            "fy": 2024,
+            "fp": "FY"
+          }
+        },
+        "net_income": {
+          "value": 37676000000,
+          "tag": "us-gaap:NetIncomeLoss",
+          "source": {
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "filed": "2025-02-14",
+            "accn": "0000019617-25-000270",
+            "form": "10-K",
+            "fy": 2024,
+            "fp": "FY"
+          }
+        },
+        "operating_cash_flow": {
+          "value": 107119000000,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source": {
+            "start": "2022-01-01",
+            "end": "2022-12-31",
+            "filed": "2025-02-14",
+            "accn": "0000019617-25-000270",
+            "form": "10-K",
+            "fy": 2024,
+            "fp": "FY"
+          }
+        },
+        "capital_spending": {
+          "value": null,
+          "tag": null,
+          "source": null
+        },
+        "equity": {
+          "value": 292332000000,
+          "tag": "us-gaap:StockholdersEquity",
+          "source": {
+            "end": "2022-12-31",
+            "filed": "2025-02-14",
+            "accn": "0000019617-25-000270",
+            "form": "10-K",
+            "fy": 2024,
+            "fp": "FY"
+          }
+        }
+      }
+    },
+    {
+      "fiscal_end": "2023-12-31",
+      "revenue": 158104000000,
+      "net_income": 49552000000,
+      "operating_cash_flow": 12974000000,
+      "capital_spending": null,
+      "equity": 327878000000,
+      "roe": 0.15112938349020064,
+      "owner_earnings": null,
+      "facts": {
+        "revenue": {
+          "value": 158104000000,
+          "tag": "us-gaap:Revenues",
+          "source": {
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "filed": "2026-02-13",
+            "accn": "0001628280-26-008131",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        },
+        "net_income": {
+          "value": 49552000000,
+          "tag": "us-gaap:NetIncomeLoss",
+          "source": {
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "filed": "2026-02-13",
+            "accn": "0001628280-26-008131",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        },
+        "operating_cash_flow": {
+          "value": 12974000000,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source": {
+            "start": "2023-01-01",
+            "end": "2023-12-31",
+            "filed": "2026-02-13",
+            "accn": "0001628280-26-008131",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        },
+        "capital_spending": {
+          "value": null,
+          "tag": null,
+          "source": null
+        },
+        "equity": {
+          "value": 327878000000,
+          "tag": "us-gaap:StockholdersEquity",
+          "source": {
+            "end": "2023-12-31",
+            "filed": "2026-02-13",
+            "accn": "0001628280-26-008131",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        }
+      }
+    },
+    {
+      "fiscal_end": "2024-12-31",
+      "revenue": 177556000000,
+      "net_income": 58471000000,
+      "operating_cash_flow": -42012000000,
+      "capital_spending": null,
+      "equity": 344758000000,
+      "roe": 0.16960012530528662,
+      "owner_earnings": null,
+      "facts": {
+        "revenue": {
+          "value": 177556000000,
+          "tag": "us-gaap:Revenues",
+          "source": {
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "filed": "2026-02-13",
+            "accn": "0001628280-26-008131",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        },
+        "net_income": {
+          "value": 58471000000,
+          "tag": "us-gaap:NetIncomeLoss",
+          "source": {
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "filed": "2026-02-13",
+            "accn": "0001628280-26-008131",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        },
+        "operating_cash_flow": {
+          "value": -42012000000,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source": {
+            "start": "2024-01-01",
+            "end": "2024-12-31",
+            "filed": "2026-02-13",
+            "accn": "0001628280-26-008131",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        },
+        "capital_spending": {
+          "value": null,
+          "tag": null,
+          "source": null
+        },
+        "equity": {
+          "value": 344758000000,
+          "tag": "us-gaap:StockholdersEquity",
+          "source": {
+            "end": "2024-12-31",
+            "filed": "2026-02-13",
+            "accn": "0001628280-26-008131",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        }
+      }
+    },
+    {
+      "fiscal_end": "2025-12-31",
+      "revenue": 182447000000,
+      "net_income": 57048000000,
+      "operating_cash_flow": -147782000000,
+      "capital_spending": null,
+      "equity": 362438000000,
+      "roe": 0.1574007140531622,
+      "owner_earnings": null,
+      "facts": {
+        "revenue": {
+          "value": 182447000000,
+          "tag": "us-gaap:Revenues",
+          "source": {
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "filed": "2026-02-13",
+            "accn": "0001628280-26-008131",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        },
+        "net_income": {
+          "value": 57048000000,
+          "tag": "us-gaap:NetIncomeLoss",
+          "source": {
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "filed": "2026-02-13",
+            "accn": "0001628280-26-008131",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        },
+        "operating_cash_flow": {
+          "value": -147782000000,
+          "tag": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "source": {
+            "start": "2025-01-01",
+            "end": "2025-12-31",
+            "filed": "2026-02-13",
+            "accn": "0001628280-26-008131",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        },
+        "capital_spending": {
+          "value": null,
+          "tag": null,
+          "source": null
+        },
+        "equity": {
+          "value": 362438000000,
+          "tag": "us-gaap:StockholdersEquity",
+          "source": {
+            "end": "2025-12-31",
+            "filed": "2026-02-13",
+            "accn": "0001628280-26-008131",
+            "form": "10-K",
+            "fy": 2025,
+            "fp": "FY"
+          }
+        }
+      }
+    }
+  ],
+  "checks": [
+    {
+      "check": "ROE of 15.0% or more every year",
+      "status": "fail"
+    },
+    {
+      "check": "Owner earnings positive every year",
+      "status": "not known"
+    },
+    {
+      "check": "Owner earnings grew, first year to last",
+      "status": "not known"
+    }
+  ],
+  "facts_sha256": "556f14621cede94677ab99716aa816b44ba2bf314126bf9bbb42e1e037696059",
+  "provenance": {
+    "source_url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0000019617.json",
+    "ticker_map_url": "https://www.sec.gov/files/company_tickers.json",
+    "downloaded_at_utc": "2026-11-05T20:43:01.131816+00:00",
+    "raw_response_sha256": "058c3b43971439f545b351cd477b28ce573edaca5f7ac1aaa0915787e8f689aa",
+    "snapshot_scope": "Unmodified relevant USD 10-K fact records for the last five annual net-income period ends; other tags omitted."
+  },
+  "warnings": []
+}

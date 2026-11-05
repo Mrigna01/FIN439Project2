@@ -4,6 +4,15 @@ Portfolio mandate checks, baseline portfolios and a Streamlit stability app for 
 
 ## Run the app
 
+On this Mac, activate the installed project environment first:
+
+```sh
+source .venv/bin/activate
+```
+
+The environment uses Python 3.13. For a fresh setup, use Python 3.11–3.14
+and create it with `python3 -m venv .venv` before activating it.
+
 ```sh
 python -m pip install -r requirements.txt
 python -m streamlit run app.py
@@ -17,6 +26,35 @@ The app starts with Meridian's training inputs. Select **Campus Scholarship Rese
 - [Lab 14: baselines and fund selection](lab14.md)
 - [Lab 15: stability decision and computed results](lab15.md)
 - [Lab 16: provenance gate and point-in-time signals](lab16.md)
+- [Lab 18: Buffett investor skill, SEC facts, memos and verification](lab18.md)
+- [Lab 19: Buffett, Cathie Wood and Burry panel](lab19.md)
+
+## Lab 19 app
+
+```sh
+source .venv/bin/activate
+python -m streamlit run legend_panel_app.py
+python verify_lab19.py
+```
+
+The panel follows the professor's November 5 update replacing Graham with Cathie
+Wood. It includes COST's known answer, NVDA from VT's largest disclosed equity
+holding, three memos side by side, the growth-threshold probe and number flags.
+The [Lab 19 write-up](lab19.md) links the results, source evidence and written analysis.
+
+## Lab 18 app
+
+This separate app uses the same environment and leaves the portfolio app above available:
+
+```sh
+source .venv/bin/activate
+python -m streamlit run buffett_app.py
+python verify_lab18.py
+```
+
+It starts from the saved SEC snapshot for COST; enter JPM to see the missing-data
+probe. The [Lab 18 write-up](lab18.md) explains live downloads, the ignored SEC
+contact configuration, the reusable Codex skill, and the remaining in-person work.
 
 ## Checks
 

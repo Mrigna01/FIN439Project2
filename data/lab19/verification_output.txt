@@ -1,0 +1,32 @@
+test_costco_chart_panel_and_three_memos (__main__.AppChecks.test_costco_chart_panel_and_three_memos) ... 2026-11-05 16:11:38.958 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_flag_each_investor_memo_and_restore (__main__.AppChecks.test_flag_each_investor_memo_and_restore) ... 2026-11-05 16:11:39.437 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_invalid_ticker_no_crash (__main__.AppChecks.test_invalid_ticker_no_crash) ... 2026-11-05 16:11:39.615 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_lab18_app_panel_extension (__main__.AppChecks.test_lab18_app_panel_extension) ... 2026-11-05 16:11:39.659 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_nvda_run_and_memo_switch (__main__.AppChecks.test_nvda_run_and_memo_switch) ... 2026-11-05 16:11:39.725 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_probe_changes_one_check_keeps_gap_and_warns_memos (__main__.AppChecks.test_probe_changes_one_check_keeps_gap_and_warns_memos) ... 2026-11-05 16:11:39.788 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_actual_skill_threshold_probe_restores_rule (__main__.KnownAnswers.test_actual_skill_threshold_probe_restores_rule) ... ok
+test_all_memos_reject_unsupported_percentage (__main__.KnownAnswers.test_all_memos_reject_unsupported_percentage) ... ok
+test_cost_all_new_numbers_and_checks (__main__.KnownAnswers.test_cost_all_new_numbers_and_checks) ... ok
+test_current_course_revision (__main__.KnownAnswers.test_current_course_revision) ... ok
+test_lab18_values_preserved (__main__.KnownAnswers.test_lab18_values_preserved) ... ok
+test_nvda_split_and_cash_failures (__main__.KnownAnswers.test_nvda_split_and_cash_failures) ... ok
+test_six_memos_bound_to_exact_analysis (__main__.KnownAnswers.test_six_memos_bound_to_exact_analysis) ... ok
+test_skills_have_frontmatter_and_executable_scripts (__main__.KnownAnswers.test_skills_have_frontmatter_and_executable_scripts) ... ok
+test_vanguard_fund_selection (__main__.KnownAnswers.test_vanguard_fund_selection) ... ok
+test_bad_revenue_denominator_preserves_unknown (__main__.MissingInputsAndThresholds.test_bad_revenue_denominator_preserves_unknown) ... ok
+test_burry_checks_threshold_boundary_and_five_year_requirement (__main__.MissingInputsAndThresholds.test_burry_checks_threshold_boundary_and_five_year_requirement) ... ok
+test_cash_input_missing_is_not_known (__main__.MissingInputsAndThresholds.test_cash_input_missing_is_not_known) ... ok
+test_missing_liabilities_stays_unknown (__main__.MissingInputsAndThresholds.test_missing_liabilities_stays_unknown) ... ok
+test_nonpositive_equity_is_unknown_for_burry (__main__.MissingInputsAndThresholds.test_nonpositive_equity_is_unknown_for_burry) ... ok
+test_wood_boundaries (__main__.MissingInputsAndThresholds.test_wood_boundaries) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.923s
+
+OK

@@ -1,0 +1,29 @@
+test_costco_table_chart_and_memo (__main__.AppChecks.test_costco_table_chart_and_memo) ... 2026-11-05 16:08:51.453 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_edit_probe_and_restore (__main__.AppChecks.test_edit_probe_and_restore) ... 2026-11-05 16:08:51.933 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_invalid_ticker_shows_error_without_crashing (__main__.AppChecks.test_invalid_ticker_shows_error_without_crashing) ... 2026-11-05 16:08:52.014 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_jpm_switch_preserves_gaps_and_memo (__main__.AppChecks.test_jpm_switch_preserves_gaps_and_memo) ... 2026-11-05 16:08:52.059 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_stale_facts_warn (__main__.AppChecks.test_stale_facts_warn) ... 2026-11-05 16:08:52.124 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_costco_all_known_values (__main__.KnownAnswerChecks.test_costco_all_known_values) ... ok
+test_hand_typed_number_probe (__main__.KnownAnswerChecks.test_hand_typed_number_probe) ... ok
+test_jpm_gaps_and_fallback (__main__.KnownAnswerChecks.test_jpm_gaps_and_fallback) ... ok
+test_saved_memos_numbers_and_fingerprints (__main__.KnownAnswerChecks.test_saved_memos_numbers_and_fingerprints) ... ok
+test_skill_metadata_and_bundled_script (__main__.KnownAnswerChecks.test_skill_metadata_and_bundled_script) ... ok
+test_snapshot_provenance (__main__.KnownAnswerChecks.test_snapshot_provenance) ... ok
+test_capex_tag_fallback (__main__.SelectionAndGapChecks.test_capex_tag_fallback) ... ok
+test_hand_calculated_ratios_and_growth (__main__.SelectionAndGapChecks.test_hand_calculated_ratios_and_growth) ... ok
+test_insufficient_years_not_silent_pass (__main__.SelectionAndGapChecks.test_insufficient_years_not_silent_pass) ... ok
+test_latest_filing_conflicts_rejected (__main__.SelectionAndGapChecks.test_latest_filing_conflicts_rejected) ... ok
+test_nonfinite_facts_are_missing (__main__.SelectionAndGapChecks.test_nonfinite_facts_are_missing) ... ok
+test_nonpositive_equity_and_missing_capex (__main__.SelectionAndGapChecks.test_nonpositive_equity_and_missing_capex) ... ok
+test_quarters_and_other_forms_excluded_latest_filing_wins (__main__.SelectionAndGapChecks.test_quarters_and_other_forms_excluded_latest_filing_wins) ... ok
+test_ticker_path_input_rejected (__main__.SelectionAndGapChecks.test_ticker_path_input_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.715s
+
+OK

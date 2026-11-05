@@ -1,0 +1,10 @@
+{
+  "course_repository": "https://github.com/CinderZhang/FIN43900-Fall2026",
+  "instructions_path": "lessons/week-11/lab-19-legend-panel.md",
+  "instructions_commit": "c4ad923d058d5250a237de56db26dfa99dbf87f6",
+  "commit_timestamp_utc": "2026-11-05T20:57:30Z",
+  "commit_message": "Lab 19: Cathie Wood replaces Graham on the panel; today's Nasdaq sell-off in the opener",
+  "pinned_instructions_url": "https://github.com/CinderZhang/FIN43900-Fall2026/blob/c4ad923d058d5250a237de56db26dfa99dbf87f6/lessons/week-11/lab-19-legend-panel.md",
+  "investors": ["Buffett", "Cathie Wood", "Burry"],
+  "new_raw_tags": ["Liabilities", "ResearchAndDevelopmentExpense"]
+}

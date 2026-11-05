@@ -1,0 +1,14 @@
+{
+  "tests_run": 19,
+  "passed": true,
+  "failures": 0,
+  "errors": 0,
+  "cost_known_answer": "All annual values and checks matched",
+  "unprinted_number_probe": [
+    "40.0%"
+  ],
+  "cost_facts_sha256": "fad48d5a28b111b19dad912f3461975d584bf2a32699df55697388fe037def4b",
+  "jpm_facts_sha256": "556f14621cede94677ab99716aa816b44ba2bf314126bf9bbb42e1e037696059",
+  "partner_work": "Not performed",
+  "fresh_browser_ai_probe": "Not performed; do not substitute a skill-aware response"
+}

@@ -1,0 +1,123 @@
+{
+  "tests_run": 21,
+  "passed": true,
+  "failures": 0,
+  "errors": 0,
+  "cost_checks": [
+    {
+      "investor": "Buffett",
+      "check": "ROE of 15.0% or more every year",
+      "status": "pass"
+    },
+    {
+      "investor": "Buffett",
+      "check": "Owner earnings positive every year",
+      "status": "pass"
+    },
+    {
+      "investor": "Buffett",
+      "check": "Owner earnings grew, first year to last",
+      "status": "pass"
+    },
+    {
+      "investor": "Cathie Wood",
+      "check": "Revenue CAGR at least 15.0%, first year to last",
+      "status": "fail"
+    },
+    {
+      "investor": "Cathie Wood",
+      "check": "R&D at least 5.0% of revenue, latest year",
+      "status": "not known"
+    },
+    {
+      "investor": "Burry",
+      "check": "Operating cash flow at least net income every year",
+      "status": "pass"
+    },
+    {
+      "investor": "Burry",
+      "check": "Liabilities/equity no greater than 2.00, latest year",
+      "status": "pass"
+    }
+  ],
+  "nvda_checks": [
+    {
+      "investor": "Buffett",
+      "check": "ROE of 15.0% or more every year",
+      "status": "pass"
+    },
+    {
+      "investor": "Buffett",
+      "check": "Owner earnings positive every year",
+      "status": "pass"
+    },
+    {
+      "investor": "Buffett",
+      "check": "Owner earnings grew, first year to last",
+      "status": "pass"
+    },
+    {
+      "investor": "Cathie Wood",
+      "check": "Revenue CAGR at least 15.0%, first year to last",
+      "status": "pass"
+    },
+    {
+      "investor": "Cathie Wood",
+      "check": "R&D at least 5.0% of revenue, latest year",
+      "status": "pass"
+    },
+    {
+      "investor": "Burry",
+      "check": "Operating cash flow at least net income every year",
+      "status": "fail"
+    },
+    {
+      "investor": "Burry",
+      "check": "Liabilities/equity no greater than 2.00, latest year",
+      "status": "pass"
+    }
+  ],
+  "threshold_probe": {
+    "method": "Temporarily override GROWTH_MINIMUM in the Wood skill module; restore afterwards.",
+    "retained": 0.15,
+    "probe": 0.05,
+    "retained_wood_checks": [
+      {
+        "investor": "Cathie Wood",
+        "check": "Revenue CAGR at least 15.0%, first year to last",
+        "status": "fail"
+      },
+      {
+        "investor": "Cathie Wood",
+        "check": "R&D at least 5.0% of revenue, latest year",
+        "status": "not known"
+      }
+    ],
+    "probe_wood_checks": [
+      {
+        "investor": "Cathie Wood",
+        "check": "Revenue CAGR at least 5.0%, first year to last",
+        "status": "pass"
+      },
+      {
+        "investor": "Cathie Wood",
+        "check": "R&D at least 5.0% of revenue, latest year",
+        "status": "not known"
+      }
+    ],
+    "rule_restored": true,
+    "same_facts": true
+  },
+  "memo_number_probe": {
+    "Buffett": [
+      "40.0%"
+    ],
+    "Cathie Wood": [
+      "40.0%"
+    ],
+    "Burry": [
+      "40.0%"
+    ]
+  },
+  "activity_record": "AI-assisted implementation and written analysis; no partner exchange or AI-off activity claimed."
+}
