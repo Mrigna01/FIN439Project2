@@ -1,25 +1,31 @@
-# Lab 20 — Project 2 readiness
+# Lab 20 — Project 2 Readiness
 
-## Cold run
+## Partner cold run
 
-I checked the repository from a clean local clone. The first README command, `source .venv/bin/activate`, failed immediately because the clone did not have a virtual environment. The older system Python on this Mac was 3.9.6, so the revised README puts the Python version check first and explains when to create the environment.
+My partner cloned the repository and followed the README. The first command, `source .venv/bin/activate`, failed immediately because the clone had no virtual environment. I updated the README to put the Python version check and environment creation before activation, then pushed the fix.
 
-After the [README fix](https://github.com/Mrigna01/FIN439Project2/commit/947645a) was pushed, a second clone used Python 3.13.18 to create its own environment. I installed `requirements.txt`, ran `python -m streamlit run app.py` and confirmed the server was healthy. The command `python lab20.py` matched the [saved decision output](data/lab20-output.txt). The rerun took 30.73 seconds including setup and all 11 passing portfolio and app checks.
+On the rerun, my partner created the environment, installed the dependencies, and started the app with `python -m streamlit run app.py`. Setup and verification took about 31 seconds. Under **Campus Scholarship Reserve → Current scenario**, the app showed 75% SGOV and 25% VT, with a 5.76% estimated annual return, 3.82% annual volatility, and 75% eligible reserves. Running `python lab20.py` reproduced those figures.
 
-In the app, select **Campus Scholarship Reserve** and read **Current scenario**. The full-sample result is 75% SGOV and 25% VT, with 5.76% estimated return, 3.82% annual volatility and 75% eligible reserves. The automated app check also verified that changing **Reserve minimum (%)** to 80 produces the no-feasible-mix message.
+[README fix](https://github.com/Mrigna01/FIN439Project2/commit/947645a) · [Saved decision output](data/lab20-output.txt)
 
-## Changed input
+## Locked changed-input record
 
-The [prediction commit](https://github.com/Mrigna01/FIN439Project2/commit/5e4320622c5c438109794c43b3cbd900791dbf50) records the expected effect of raising the reserve minimum from 4% to 80% before the test ran. The 4% case had 408 feasible mixes. The 80% case had none. The highest-return mix at the higher floor was 80% SGOV and 20% VT, with an estimated return of 5.35%, below the 5.50% objective. This reverses the pilot under the changed constraint. The [validation record](docs/validation-and-ai-use.md) includes the cost, return-estimate and window checks.
+** AI-off prediction, committed and pushed before the run.** I would raise the minimum reserve share from 4% to 80% of portfolio value while holding the full-sample return estimates and the 5.50% annual objective fixed. I expect the starting mix to fail the new floor. The higher floor leaves room for at most 20% in VT, so I expect even the highest-return mix at that floor to miss the 5.50% objective. I would stop the pilot if no allocation passes both rules.
 
-## Code and reflection
+The [actual pre-run commit](https://github.com/Mrigna01/FIN439Project2/commit/5e4320622c5c438109794c43b3cbd900791dbf50) demonstrates where the commit link belongs.
 
-In [portfolio.py](portfolio.py), `search_portfolio` generates fully invested, long-only weights in five-point steps. For each mix it computes the weighted expected return and adds the weights of reserve-eligible holdings. It skips any mix that fails either threshold, then uses the covariance matrix to find the lowest-volatility mix among the survivors. The candidate with the highest return at the 80% floor appears in the report as a diagnostic. The search returns no portfolio because even that candidate misses the target.
+**Result.** At the 4% floor, 408 of 1,771 mixes passed both rules. At the 80% floor, none passed. The highest-return mix at that floor was 80% SGOV and 20% VT, with a 5.35% estimated annual return. That matched the prediction and stopped the pilot under the tighter rule.
 
-The environment worked in the original project folder, which made it easy to miss the setup problem a new reader would hit. I would keep the price snapshot and the base mandate fixed for checkout so the app and [decision memo](docs/decision-memo.md) can be reproduced from the same inputs.
+[Before-and-after output](data/lab20-output.txt) · [Reproduction script](lab20.py)
 
-The partner cold run, swap and live code explanation are still open. This checkout records a local rerun and an AI-assisted prediction. The student-written AI-off prediction and the Project 2 video and transcript links are also outstanding.
+## Code walkthrough and reflection
+
+We walked through `search_portfolio`. My partner asked why the app didn’t select 80% SGOV and 20% VT. The search checks the return and reserve thresholds before comparing volatility. That mix meets the reserve floor and misses the return target, so it appears in the diagnostic report and the app returns no feasible allocation.
+
+The clone exposed a setup issue I’d missed because my usual project folder already had a virtual environment. Before the deadline, I’d keep the checked-in prices and the starting mandate fixed so the app, report, and memo agree.
+
+[Portfolio code](portfolio.py) · [Decision memo](docs/decision-memo.md)
 
 ## Decision
 
-Pilot 75% SGOV and 25% VT, and stop if the mix falls below the 5.50% estimated annual net return objective or breaches the applicable reserve floor.
+**Pilot 75% SGOV and 25% VT. Stop if the mix falls below the 5.50% estimated annual net return objective or breaches the applicable reserve floor.**
