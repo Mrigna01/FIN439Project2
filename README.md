@@ -4,21 +4,30 @@ Portfolio mandate checks, baseline portfolios and a Streamlit stability app for 
 
 ## Run the app
 
-On this Mac, activate the installed project environment first:
+Use Python 3.11–3.14. On a fresh clone, check that `python3 --version`
+shows a supported version before creating the environment. If `python3` points
+to an older version, use the command for your supported interpreter instead,
+such as `python3.13`. If you already have a working `.venv`, start at activation.
 
 ```sh
+python3 -m venv .venv
 source .venv/bin/activate
-```
-
-The environment uses Python 3.13. For a fresh setup, use Python 3.11–3.14
-and create it with `python3 -m venv .venv` before activating it.
-
-```sh
 python -m pip install -r requirements.txt
 python -m streamlit run app.py
 ```
 
 The app starts with Meridian's training inputs. Select **Campus Scholarship Reserve** to use the included prices and the case's 5.5% return objective and 4% reserve minimum. You can also upload a CSV with `Date` first and three to six fund columns. Change return estimates or switch to the last 36 months to compare allocations.
+
+## Reproduce the Campus decision
+
+With a supported Python, run `python3 lab20.py` from the repository root.
+If you activated the environment above, `python lab20.py` works too.
+The report uses the checked-in prices and requires no third-party packages.
+
+- [Saved decision output](data/lab20-output.txt)
+- [Decision memo](docs/decision-memo.md)
+- [Validation and AI use](docs/validation-and-ai-use.md)
+- [Lab 20 checkout](lab20.md)
 
 ## Lab write-ups
 

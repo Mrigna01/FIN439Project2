@@ -1,0 +1,18 @@
+Campus Scholarship Reserve
+Full sample: 60 monthly returns, 2021-10-29 through 2026-09-30
+Objective: 5.50% annually | Base reserve floor: 4%
+All displayed mixes are long-only and fully invested.
+Equal weight: SGOV 25% / SCHR 25% / USIG 25% / VT 25% | Return 3.86% | Volatility 6.51% | Reserve 50.00% | Return objective fail, reserve floor pass
+Benchmark: SGOV 0% / SCHR 0% / USIG 40% / VT 60% | Return 7.18% | Volatility 11.59% | Reserve 0.00% | Return objective pass, reserve floor fail
+Full sample: SGOV 75% / SCHR 0% / USIG 0% / VT 25% | Return 5.76% | Volatility 3.82% | Reserve 75.00% | Return objective pass, reserve floor pass
+  Feasible allocations: 408 of 1,771
+Last 36 months (2023-10-31 through 2026-09-30): SGOV 90% / SCHR 0% / USIG 0% / VT 10% | Return 6.02% | Volatility 1.21% | Reserve 90.00% | Return objective pass, reserve floor pass
+  Feasible allocations: 1,335 of 1,771
+VT estimate down 1 percentage point: SGOV 75% / SCHR 0% / USIG 0% / VT 25% | Return 5.51% | Volatility 3.82% | Reserve 75.00% | Return objective pass, reserve floor pass
+  Feasible allocations: 339 of 1,771
+Illustrative annual cost of 30 basis points (net return): SGOV 70% / SCHR 0% / USIG 0% / VT 30% | Return 5.87% | Volatility 4.55% | Reserve 70.00% | Return objective pass, reserve floor pass
+  Feasible allocations: 362 of 1,771
+Original pilot after that cost: SGOV 75% / SCHR 0% / USIG 0% / VT 25% | Return 5.46% | Volatility 3.82% | Reserve 75.00% | Return objective fail, reserve floor pass
+Reserve floor raised to 80%: no grid allocation meets the 5.50% return objective and the 80% reserve floor
+Highest-return mix at an 80% reserve floor: SGOV 80% / SCHR 0% / USIG 0% / VT 20% | Return 5.35% | Volatility 3.08% | Reserve 80.00% | Return objective fail, reserve floor pass
+Decision: Pilot 75% SGOV / 25% VT. Stop if the mix falls below the 5.50% annual net return objective or breaches the applicable reserve floor.
