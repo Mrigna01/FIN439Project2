@@ -12,7 +12,7 @@ On the rerun, my partner created the environment, installed the dependencies, an
 
 ** AI-off prediction, committed and pushed before the run.** I would raise the minimum reserve share from 4% to 80% of portfolio value while holding the full-sample return estimates and the 5.50% annual objective fixed. I expect the starting mix to fail the new floor. The higher floor leaves room for at most 20% in VT, so I expect even the highest-return mix at that floor to miss the 5.50% objective. I would stop the pilot if no allocation passes both rules.
 
-The [actual pre-run commit](https://github.com/Mrigna01/FIN439Project2/commit/5e4320622c5c438109794c43b3cbd900791dbf50) demonstrates where the commit link belongs.
+The [actual pre-run commit](https://github.com/Mrigna01/FIN439Project2/commit/af9bd3b5117bb19c18b0dd6ea792ea439ebc6e88) demonstrates where the commit link belongs.
 
 **Result.** At the 4% floor, 408 of 1,771 mixes passed both rules. At the 80% floor, none passed. The highest-return mix at that floor was 80% SGOV and 20% VT, with a 5.35% estimated annual return. That matched the prediction and stopped the pilot under the tighter rule.
 
