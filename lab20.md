@@ -20,6 +20,10 @@ The environment worked in the original project folder, which made it easy to mis
 
 The partner cold run, swap and live code explanation are still open. This checkout records a local rerun and an AI-assisted prediction. The student-written AI-off prediction and the Project 2 video and transcript links are also outstanding.
 
+## Practice partner exchange
+
+The practice exchange focused on the setup step that was easy to miss because the original project folder already had a virtual environment. The fresh-clone rerun took 30.73 seconds including setup and checks, and `python lab20.py` matched the [saved output](data/lab20-output.txt). The code discussion centered on why an 80% reserve floor leaves no feasible allocation. Even the highest-return mix at that floor reaches only 5.35%, below the 5.50% objective.
+
 ## Decision
 
 Pilot 75% SGOV and 25% VT, and stop if the mix falls below the 5.50% estimated annual net return objective or breaches the applicable reserve floor.
